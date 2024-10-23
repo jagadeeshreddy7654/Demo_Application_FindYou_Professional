@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
-
+    tools:context=".LoginActivity">
     <ImageView
         android:id="@+id/bgImage"
         android:layout_width="match_parent"
@@ -18,8 +16,8 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:scrollbars="none"
         android:layout_height="wrap_content"
+        android:scrollbars="none"
         android:layout_below="@+id/bgImage">
 
         <LinearLayout
@@ -39,10 +37,10 @@
                 android:layout_marginBottom="22dp"
                 android:fontFamily="@font/poppins_bold"
                 android:gravity="center"
-                android:text="Sign up"
+                android:text="Login"
                 android:textColor="@android:color/black"
                 android:textSize="34sp"
-              />
+                />
 
             <!-- Email Field -->
             <androidx.appcompat.widget.AppCompatEditText
@@ -68,35 +66,26 @@
                 android:inputType="textPassword"
                 android:padding="10dp" />
 
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/etConfirmPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:layout_marginTop="12dp"
-                android:background="@drawable/edittext_background"
-                android:hint="Confirm Password"
-                android:inputType="textPassword"
-                android:padding="10dp" />
 
-            <!-- Social Sign Up Label -->
             <TextView
                 android:id="@+id/tvSignUpUsing"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
                 android:layout_marginBottom="10dp"
-                android:padding="1dp"
+                android:padding="8dp"
                 android:textSize="16sp"
                 android:fontFamily="@font/poppins_semibold"
-                android:text="Sign up using"
+                android:text="Forget password ?"
                 android:textColor="@android:color/black" />
 
-            <!-- Social Media Buttons -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:weightSum="3"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal"
                 android:padding="1dp">
 
@@ -108,11 +97,11 @@
                     android:orientation="horizontal"
                     android:padding="10dp"
                     android:background="@drawable/image_background">
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/btnGoogleSignUp"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_google" />
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/btnGoogleSignUp"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_google" />
                 </LinearLayout>
                 <TextView
                     android:layout_width="match_parent"
@@ -120,8 +109,9 @@
                     android:gravity="center"
                     android:layout_weight="1"
                     android:text="or"
+                    android:padding="8dp"
                     android:textSize="16sp"
-                    android:padding="1dp"
+                    android:fontFamily="@font/poppins_semibold"
                     android:textColor="@android:color/black" />
 
                 <LinearLayout
@@ -133,10 +123,10 @@
                     android:padding="10dp"
                     android:background="@drawable/image_background">
                     <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/btnFacebookSignUp"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:src="@drawable/ic_facebook" />
+                        android:id="@+id/btnFacebookSignUp"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_facebook" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -144,10 +134,10 @@
                 android:id="@+id/btnSignUp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:onClick="singup"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="16dp"
                 android:backgroundTint="@android:color/holo_blue_light"
-                android:text="Sign up"
+                android:text="Sign in"
                 android:textColor="@android:color/white"
                 tools:ignore="OnClick" />
 
@@ -155,11 +145,11 @@
                 android:id="@+id/tvLoginRedirect"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
+                android:layout_marginTop="16dp"
                 android:gravity="center"
                 android:textSize="16sp"
                 android:fontFamily="@font/poppins_semibold"
-                android:text="Already have an account? Login"
+                android:text="Don’t have an account sign up?"
                 android:textColor="@android:color/black" />
 
         </LinearLayout>
